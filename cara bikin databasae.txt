@@ -1,0 +1,37 @@
+cara bikin table
+1.rails g model post title:string content:text
+2.cek file db/migrate
+3.rake db:migrate
+
+4. masuk ke 
+rails console
+input data ke tabel post
+1.
+ketik : post =Post.new(:title=>'title saja',:content=>'content saja')
+ketik : post.save #untuk menyimpan dan memberikan id
+ketik : post #untuk melihat
+
+2. Post.create(:title=>'title kedua saja',:content=>'content kedua saja') #tanpa ada post.save
+
+melihat semua data
+posts = Post.all
+atau post = Post.all
+
+mencari per id
+post = Post.find(2)
+melihat hasil per field
+post.title
+post.content
+
+cara update
+setelah 
+post = Post.find(2)
+post.title ="Judul 2nd"
+post.save
+
+atau untuk updte tanpa harus post.save
+post.update_attribute(:content,"2nd Content here")
+
+menghapus id sekarang
+post.destroy
+
